@@ -348,3 +348,6 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+venv/
+staybox_passwd_api/staybox_passwd_api/__pycache__/
+db.sqlite3
