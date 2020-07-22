@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Passwd
+from core.models import PasswdModel
 
 # Register your models here.
 
-admin.site.register(Passwd)
+admin.site.register(PasswdModel)
