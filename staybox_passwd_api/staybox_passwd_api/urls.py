@@ -20,10 +20,10 @@ from rest_framework import routers
 from core.viewsets import PasswordViewSet
 
 router = routers.DefaultRouter()
-router.register(r'password/', PasswordViewSet)
+router.register(r'password', PasswordViewSet)
 
 
 urlpatterns = [
-    path('',include(router.urls)),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
