@@ -8,5 +8,5 @@ class Passwd(models.Model):
   datetime = models.DateTimeField(auto_now_add=True)
 
   def __str__(self):
-      return self.ip + self.passwd
+      return self.passwd
   
