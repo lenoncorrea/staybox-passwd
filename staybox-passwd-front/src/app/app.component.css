@@ -34,7 +34,7 @@
   height: 15px;
   margin-top: 5px;
   border-radius: 30px !important;
-  background-color: var(--progress-bar-background);
+  background-color: #10244a;
   outline: none;
 }
 
@@ -220,7 +220,7 @@ input.dark::selection {
 body {
 	font-size: var(--global-font-size);
 	color: var(--font-color);
-	line-height: var(--global-line-height);
+	/* line-height: var(--global-line-height); */
 	margin: 0;
 	font-family: var(--font-stack);
 	word-wrap: break-word;
@@ -323,7 +323,7 @@ h4,
 h5,
 h6 {
 	position: relative;
-	margin-bottom: var(--global-line-height);
+	margin-bottom: line-height;
 	font-weight: 600
 }
 
@@ -397,7 +397,7 @@ pre code {
 	font-size: var(--global-font-size);
 	font-style: normal;
 	font-family: var(--font-stack);
-	color: var(--font-color)
+	color: #000000;
 }
 
 .terminal-prompt {
@@ -413,7 +413,7 @@ pre code {
 	content: "";
 	-webkit-animation: cursor .8s infinite;
 	animation: cursor .8s infinite;
-	background: #1a95e0;
+	background: #ff7400;
 	border-radius: 0;
 	display: inline-block;
 	height: 1em;
@@ -619,7 +619,7 @@ img {
 
 .progress-bar {
 	height: 8px;
-	background-color: var(--progress-bar-background);
+	background-color: #10244a;
 	margin: 12px 0
 }
 
@@ -723,7 +723,7 @@ input[type=number],
 input[type=password],
 input[type=search],
 input[type=text] {
-	border: 1px var(--input-style) var(--font-color);
+	border: 1px #000 #000000;
 	width: 100%;
 	padding: .7em .5em;
 	font-size: 1em;
