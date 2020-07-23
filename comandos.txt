@@ -4,6 +4,7 @@ python3.8 -m venv venv
 # Instala Django e Django Rest Framework
 pip install django
 pip install djangorestframework
+pip install django-cors-headers
 
 # Inicia projeto padrão Django
 django-admin startproject pontos_turisticos .
