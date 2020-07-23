@@ -22,6 +22,8 @@ import { ToogleComponent } from './toogle/toogle.component';
   ],
   providers: [
     GeneratePasswordComponent,
+    ClipboardComponent,
+    ToogleComponent
   ],
   bootstrap: [AppComponent]
 })

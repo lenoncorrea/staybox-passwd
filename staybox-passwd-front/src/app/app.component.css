@@ -34,7 +34,7 @@
   height: 15px;
   margin-top: 5px;
   border-radius: 30px !important;
-  background-color: #10244a;
+  background-color: #a3abba;
   outline: none;
 }
 
@@ -57,7 +57,7 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: var(--progress-bar-fill);
+  background: #ff7400;
   cursor: pointer;
 }
 .row {
@@ -367,7 +367,7 @@ pre {
 	word-wrap: break-word;
 	color: var(--secondary-color);
 	background-color: var(--background-color);
-	border: 1px solid var(--secondary-color);
+	border: 1px solid #000000;
 	padding: var(--global-space);
 	white-space: pre-wrap;
 	white-space: -moz-pre-wrap;
@@ -567,7 +567,7 @@ ol.terminal-toc li a {
 }
 
 .terminal-menu li a.active {
-	color: var(--font-color)
+	color: #000000;
 }
 
 .terminal-menu li a:hover {
@@ -595,7 +595,7 @@ hr {
 	overflow: hidden;
 	margin: calc(var(--global-space) * 4) 0;
 	border: 0;
-	border-bottom: 1px dashed var(--secondary-color)
+	border-bottom: 1px dashed #a3abba;
 }
 
 p {
@@ -604,13 +604,13 @@ p {
 }
 
 .container {
-	max-width: var(--page-width)
+	max-width:  40em;
 }
 
 .container,
 .container-fluid {
 	margin: 0 auto;
-	padding: 0 calc(var(--global-space) * 2)
+	padding: 0 10px * 2)
 }
 
 img {

@@ -12,10 +12,16 @@ export class ClipboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // onMouse() {
-  //   let tooltip = document.getElementById("myTooltip");
-  //   tooltip.innerHTML = "Copiar";
-  // };
+
+
+  onClick = (value) => {
+    console.log(value)
+    // let copyText = document.getElementById("input");
+    // copyText.select();
+    document.execCommand("copy");
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiado";
+  };
 
   // copyPassword() {
   //   let copyText = document.getElementById("input");

@@ -20,15 +20,16 @@
       </header>
       <div class="input-container">
         <input id="input" class="light" name="password" type="text" readonly="" value="-<A@Kvlh8qOG5YtoG-Th">
-      </div>
-      <div class="clipboard">
-        <div class="tooltip">
-          <span class="tooltiptext" id="myTooltip">Copiar</span>
-          <img src="./assets/images/copy.png">
+        <div class="clipboard">
+          <div class="tooltip">
+            <span class="tooltiptext" id="myTooltip"></span>
+            <!--<img src="../assets/images/copy.png" alt="copy" height="25" (mouseout)="onMouseOut()" (click)="onClickMouse()"> -->
+            <img src="../assets/images/copy.png" alt="copy" height="25" (click)="onClickMouse()">
+          </div>
         </div>
       </div>
     </section>
-    <br />
+    <hr>
     <section>
       <header>
         <div style="text-align: center;">
