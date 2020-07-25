@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GeneratePasswordComponent } from './generate-password/generate-password.component';
-import { ClipboardComponent } from './clipboard/clipboard.component';
+import { Clipboard } from '@angular/cdk/clipboard';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -9,29 +10,89 @@ import { ClipboardComponent } from './clipboard/clipboard.component';
 })
 export class AppComponent {
   title = 'staybox-passwd-front';
-  member = "";
+  length = "";
+  uppercase = "";
+  lowercase = "";
+  numeric = "";
+  symbol = "";
+  password = "";
+  passwords = "";
 
-    constructor(private generatePasswd:GeneratePasswordComponent, private clipboard:ClipboardComponent) { }
+  constructor(
+    private generatePasswd: GeneratePasswordComponent,
+    private clipboard: Clipboard,
+    private api: ApiService
+    ) { }
 
-  generatePassword = () => {
-    this.generatePasswd.generate();
-    // console.log("click");
+  ngOnInit(): void {
+    this.generatePassword();
+  }
+
+  alterLength = (length) => {
+    this.length = length;
+    this.generatePasswd.setLength(length);
+    this.generatePassword();
+  };
+  alterUppercase = (uppercase) => {
+    this.uppercase = uppercase;
+    this.generatePasswd.setUpperCase(uppercase);
+    this.generatePassword();
+  };
+  alterLowerCase = (lowercase) => {
+    this.lowercase = lowercase;
+    this.generatePasswd.setLowerCase(lowercase);
+    this.generatePassword();
+  };
+  alternumeric = (numeric) => {
+    this.numeric = numeric;
+    this.generatePasswd.setNumberCase(numeric);
+    this.generatePassword();
+  };
+  altersymbol = (symbol) => {
+    this.symbol = symbol;
+    this.generatePasswd.setSymbol(symbol);
+    this.generatePassword();
   };
 
-  // onMouseOut = () => {
-  //   this.clipboard.onMouse();
-  // };
+  generatePassword = () => {
+    this.password = this.generatePasswd.generate();
+  };
 
   onMouseOut = () => {
     let tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copiar";
   };
 
-  onClickMouse = () => {
-    let copyText = document.getElementById("input");
-    // copyText.getAttribute();
-    console.log(copyText);
-    // this.clipboard.onClick(value);
+  getIpAddress = () => {
+    this
+    this.clipboard.copy(this.password);
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiado";
+    this.api.getAllPasswords().subscribe(
+      data => {
+        this.passwords = data
+      },
+      error => {
+        console.log("Aconteceu um erro", error.message);
+      }
+    );
   };
 
+  copyPassword = (password) => {
+    this.clipboard.copy(this.password);
+    let tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiado";
+    this.getIp();
+  };
+
+  getIp = () => {
+    this.api.getIpAddress().subscribe(
+        data => {
+          console.log(data);
+        },
+        error => {
+          console.log("Aconteceu um erro", error.message);
+        }
+      );
+  };
 }

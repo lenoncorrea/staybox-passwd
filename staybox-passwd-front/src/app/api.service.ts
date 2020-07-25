@@ -9,10 +9,20 @@ export class ApiService {
   baseUrl = 'http://localhost:8000/';
   httpHeaders = new HttpHeaders({'Content-Type': 'application/json'});
 
-  constructor(private http:HttpClient) { }
+  constructor(private http: HttpClient) { }
 
   getAllPasswords() : Observable<any> {
     return this.http.get(this.baseUrl + 'password/',
     {headers: this.httpHeaders});
   };
+
+  writePassword(password) : Observable<any> {
+    return this.http.post(this.baseUrl + 'password/', password,
+    {headers: this.httpHeaders});
+  };
+
+  getIpAddress() : Observable<any> {
+    return this.http.get('http://icanhazip.com/');
+  };
+
 }
