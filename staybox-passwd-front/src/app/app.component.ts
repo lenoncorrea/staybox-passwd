@@ -16,7 +16,10 @@ export class AppComponent {
   numeric = "";
   symbol = "";
   password = "";
-  passwords = "";
+  ip = "";
+  copied = {
+    ip: '', passwd: ''
+  };
 
   constructor(
     private generatePasswd: GeneratePasswordComponent,
@@ -63,32 +66,18 @@ export class AppComponent {
     tooltip.innerHTML = "Copiar";
   };
 
-  getIpAddress = () => {
-    this
-    this.clipboard.copy(this.password);
-    let tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copiado";
-    this.api.getAllPasswords().subscribe(
-      data => {
-        this.passwords = data
-      },
-      error => {
-        console.log("Aconteceu um erro", error.message);
-      }
-    );
-  };
-
   copyPassword = (password) => {
     this.clipboard.copy(this.password);
     let tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copiado";
     this.getIp();
+    console.log(this.api.writePassword(this.copied));
   };
 
   getIp = () => {
     this.api.getIpAddress().subscribe(
         data => {
-          console.log(data);
+          this.ip = data;
         },
         error => {
           console.log("Aconteceu um erro", error.message);

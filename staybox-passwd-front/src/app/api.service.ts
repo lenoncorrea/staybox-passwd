@@ -16,13 +16,13 @@ export class ApiService {
     {headers: this.httpHeaders});
   };
 
-  writePassword(password) : Observable<any> {
-    return this.http.post(this.baseUrl + 'password/', password,
+  writePassword(copied) : Observable<any> {
+    return this.http.post(this.baseUrl + 'password/', copied,
     {headers: this.httpHeaders});
   };
 
   getIpAddress() : Observable<any> {
-    return this.http.get('http://icanhazip.com/');
+    return this.http.get('https://api.ipify.org/?format=json',
+    {headers: this.httpHeaders});
   };
-
 }
