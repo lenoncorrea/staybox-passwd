@@ -16,10 +16,7 @@ export class AppComponent {
   numeric = "";
   symbol = "";
   password = "";
-  ip = "";
-  copied = {
-    ip: '', passwd: ''
-  };
+  copied = { ip: '', passwd: '' };
 
   constructor(
     private generatePasswd: GeneratePasswordComponent,
@@ -32,7 +29,7 @@ export class AppComponent {
   }
 
   alterLength = (length) => {
-    this.length = length;
+    this.length = length.value;
     this.generatePasswd.setLength(length);
     this.generatePassword();
   };
@@ -71,17 +68,13 @@ export class AppComponent {
     let tooltip = document.getElementById("myTooltip");
     tooltip.innerHTML = "Copiado";
     this.getIp();
-    console.log(this.api.writePassword(this.copied));
-  };
+    setTimeout(()=>{ this.api.writePassword(this.copied).subscribe()}, 10000) };
 
   getIp = () => {
-    this.api.getIpAddress().subscribe(
-        data => {
-          this.ip = data;
-        },
-        error => {
-          console.log("Aconteceu um erro", error.message);
-        }
-      );
+    this.api.getIpAddress().subscribe((res:any)=>{
+      this.copied.passwd = this.password;
+      this.copied.ip = res.ip;
+    });
   };
+
 }

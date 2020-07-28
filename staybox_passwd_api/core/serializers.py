@@ -5,4 +5,4 @@ from core.models import PasswdModel
 class PasswdSerializer(serializers.ModelSerializer):
   class Meta:
     model = PasswdModel
-    fields = ['id', 'ip']
+    fields = ['id', 'ip', 'passwd', 'datetime']

@@ -191,7 +191,7 @@ input.dark::selection {
 	--page-width: 60em;
 	--font-color: #151515;
 	--invert-font-color: #fff;
-	--primary-color: #1a95e0;
+	--primary-color: #ff7400;
 	--secondary-color: #727578;
 	--error-color: #d20962;
 	--progress-bar-background: #727578;
@@ -208,13 +208,13 @@ input.dark::selection {
 }
 
 ::-moz-selection {
-	background: #1a95e0;
-	color: var(--invert-font-color)
+	background: #ff7400;
+	color: #ffffff;
 }
 
 ::selection {
-	background: #1a95e0;
-	color: var(--invert-font-color)
+	background: #ff7400;
+	color: #ffffff;
 }
 
 body {
@@ -224,7 +224,7 @@ body {
 	margin: 0;
 	font-family: var(--font-stack);
 	word-wrap: break-word;
-	background-color: var(--background-color)
+	background-color: #ffffff;
 }
 
 .logo,
@@ -855,15 +855,15 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .btn.btn-ghost {
-	border-color: var(--font-color);
-	color: var(--font-color);
+	border-color: #000000;
+	color: #000000;
 	background-color: transparent
 }
 
 .btn.btn-ghost:focus,
 .btn.btn-ghost:hover {
-	border-color: var(--tertiary-color);
-	color: var(--tertiary-color);
+	border-color: #000000;
+	color: #000000;
 	z-index: 2
 }
 
@@ -878,21 +878,21 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .btn-default {
-	background-color: var(--font-color);
-	border-color: var(--invert-font-color);
-	color: var(--invert-font-color)
+	background-color: #000000;
+	border-color: #ffffff;
+	color: #ffffff;
 }
 
 .btn-default:focus:not(.btn-ghost),
 .btn-default:hover {
-	background-color: var(--secondary-color);
-	color: var(--invert-font-color)
+	background-color: #727578;
+	color: #ffffff;
 }
 
 .btn-default.btn-ghost:focus,
 .btn-default.btn-ghost:hover {
-	border-color: var(--secondary-color);
-	color: var(--secondary-color);
+	border-color: #727578;
+	color: #727578;
 	z-index: 2
 }
 
@@ -928,8 +928,8 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 
 .btn-primary:focus:not(.btn-g),
 .btn-primary:hover {
-	background-color: #1a95e0;
-	border-color: #1a95e0;
+	background-color: #ff7400;
+	border-color: #ff7400;
 }
 
 .btn-primary.btn-ghost {
@@ -962,13 +962,13 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .terminal-card {
-	border: 1px solid var(--secondary-color)
+	border: 1px solid #727578;
 }
 
 .terminal-card>header {
-	color: var(--invert-font-color);
+	color: #ffffff;
 	text-align: center;
-	background-color: var(--secondary-color);
+	background-color: #727578;
 	padding: .5em 0
 }
 
@@ -1068,11 +1068,11 @@ textarea:-webkit-autofill:hover textarea:-webkit-autofill:focus {
 }
 
 .terminal-placeholder {
-	background-color: var(--secondary-color);
+	background-color: #727578;
 	text-align: center;
 	color: var(--font-color);
 	font-size: 1rem;
-	border: 1px solid var(--secondary-color)
+	border: 1px solid #727578;
 }
 
 figure>img {
@@ -1093,7 +1093,7 @@ figure {
 }
 
 figure>figcaption {
-	color: var(--secondary-color);
+	color: #727578;
 	text-align: center
 }
 
@@ -1102,16 +1102,16 @@ figure>figcaption {
 	overflow-x: auto;
 	padding: .5em;
 	background: var(--block-background-color);
-	color: var(--font-color)
+	color: #000000;
 }
 
 .hljs-comment,
 .hljs-quote {
-	color: var(--secondary-color)
+	color: #727578;
 }
 
 .hljs-variable {
-	color: var(--font-color)
+	color: #000000;
 }
 
 .hljs-built_in,
@@ -1119,7 +1119,7 @@ figure>figcaption {
 .hljs-name,
 .hljs-selector-tag,
 .hljs-tag {
-	color: var(--primary-color)
+	color: #ff7400;
 }
 
 .hljs-addition,
@@ -1131,32 +1131,32 @@ figure>figcaption {
 .hljs-template-variable,
 .hljs-title,
 .hljs-type {
-	color: var(--secondary-color)
+	color: #727578;
 }
 
 .hljs-string {
-	color: var(--secondary-color)
+	color: #727578;
 }
 
 .hljs-deletion,
 .hljs-meta,
 .hljs-selector-attr,
 .hljs-selector-pseudo {
-	color: var(--primary-color)
+	color: #ff7400
 }
 
 .hljs-doctag {
-	color: var(--secondary-color)
+	color: #727578;
 }
 
 .hljs-attr {
-	color: var(--primary-color)
+	color: #ff7400;
 }
 
 .hljs-bullet,
 .hljs-link,
 .hljs-symbol {
-	color: var(--primary-color)
+	color: #ff7400
 }
 
 .hljs-emphasis {
