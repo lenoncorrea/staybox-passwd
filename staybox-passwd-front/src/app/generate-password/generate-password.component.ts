@@ -10,7 +10,7 @@ export class GeneratePasswordComponent implements OnInit {
 
   constructor(private api:ApiService) { }
   characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@$%&*()<>.?/[]{}-=_+";
-  length = 20;
+  length:number = 20;
 
   ngOnInit(): void {
   }

@@ -7,6 +7,9 @@
           <div class="col">
             <h1 class=" terminal-prompt"> Senha segura </h1>
           </div>
+          <div class="col">
+            <!--<img src="../assets/images/staybox.png" alt="Logo" style="align: right;">-->
+          </div>
         </div>
       </header>
       <br />
@@ -71,13 +74,13 @@
               <div style="text-align: center;">
                 <div class="row">
                   <div class="col">
-                    <input type="number" min="8" max="40"  style="width: 65px;" (change)="alterLength(slider.value)" value="{{ slider.value }}">
+                    <input type="number" min="10" max="40" style="width: 65px;" value="{{ length }}" (ngModelChange)="alterLength(length)">
                   </div>
                 </div>
               </div>
               <br />
               <div class="slider-container">
-                <input #slider class="slider" type="range" min="8" max="40" ngModel="value" tickInterval="1" (change)="alterLength(slider.value)">
+                <input #slider class="slider" type="range" min="10" max="40" [(ngModel)]="length" (ngModelChange)="alterLength(length)">
               </div>
             </div>
           </div>

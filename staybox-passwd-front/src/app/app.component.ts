@@ -10,7 +10,7 @@ import { ApiService } from './api.service';
 })
 export class AppComponent {
   title = 'staybox-passwd-front';
-  length = "";
+  length:number = 20;
   uppercase = "";
   lowercase = "";
   numeric = "";
@@ -29,7 +29,7 @@ export class AppComponent {
   }
 
   alterLength = (length) => {
-    this.length = length.value;
+    this.length = length;
     this.generatePasswd.setLength(length);
     this.generatePassword();
   };
@@ -64,11 +64,13 @@ export class AppComponent {
   };
 
   copyPassword = (password) => {
-    this.clipboard.copy(this.password);
-    let tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copiado";
-    this.getIp();
-    setTimeout(()=>{ this.api.writePassword(this.copied).subscribe()}, 10000) };
+    if (password != "Selecione ao menos uma opção abaixo para gerar a senha!") {
+      this.clipboard.copy(this.password);
+      let tooltip = document.getElementById("myTooltip");
+      tooltip.innerHTML = "Copiado";
+      this.getIp();
+      setTimeout(()=>{ this.api.writePassword(this.copied).subscribe()}, 10000) };
+    };
 
   getIp = () => {
     this.api.getIpAddress().subscribe((res:any)=>{
