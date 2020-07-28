@@ -131,7 +131,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 CORS_ORIGIN_WHITELIST = [
-    "http://localhost:4200",
+    "passwd.staybox.com.br",
 ]
 
 CORS_ALLOW_METHODS = [
