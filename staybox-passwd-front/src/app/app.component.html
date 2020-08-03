@@ -73,7 +73,7 @@
               <div style="text-align: center;">
                 <div class="row">
                   <div class="col">
-                    <input type="number" min="10" max="40" style="width: 65px;" value="{{ length }}" (ngModelChange)="alterLength(length)">
+                    <input type="number" min="10" max="40" style="width: 65px;" value="{{ length }}" [(ngModel)]="length" (ngModelChange)="alterLength(length)">
                   </div>
                 </div>
               </div>
