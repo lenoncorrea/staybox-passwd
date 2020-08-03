@@ -53,7 +53,7 @@ export class GeneratePasswordComponent implements OnInit {
 
   generate = () => {
     let characterList = this.characters;
-    if (this.length >= 10 && length <=40) {
+    if (this.length >= 10 && this.length <=40) {
       if (characterList.length <= 0) {
         return "Selecione ao menos uma opção abaixo para gerar a senha!";
       }
