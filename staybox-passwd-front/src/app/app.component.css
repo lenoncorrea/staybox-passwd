@@ -46,9 +46,11 @@
 }
 input.light::-moz-selection {
   background: transparent;
+  display: block;
 }
 input.light::selection {
-  background: #ff7400;
+  background: transparent;
+  display: block;
 }
 .input-container {
   display: flex;
@@ -179,11 +181,6 @@ input.light::selection {
 }
 
 ::-moz-selection {
-	background: #ff7400;
-	color: #ffffff;
-}
-
-::selection {
 	background: #ff7400;
 	color: #ffffff;
 }
@@ -699,7 +696,11 @@ input[type=text] {
 	padding: .7em .5em;
 	font-size: 1em;
 	font-family: var(--font-stack);
-	-webkit-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 input,
