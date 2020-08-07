@@ -25,7 +25,7 @@ SECRET_KEY = '1d1tumozh3(ed#z917!(8yz!%t3(d9a&8l8pg6=pxo^y!w8$b_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['api.passwd.staybox.com.br']
 
 
 # Application definition
